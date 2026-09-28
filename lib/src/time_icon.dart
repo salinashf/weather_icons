@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:weather_icons/weather_icons.dart';
 
 /// Collection of helper functions for getting a time icon.
+/// Consider using [BoxedIcon] to display the time icon.
+///
+/// See [erikflowers/WeatherIcons](https://erikflowers.github.io/weather-icons/).
 class TimeIcon {
+  /// Get a 'time' [IconData] at a specific [hour].
+  ///
+  /// If [hour] is midnight (0) then it will return [WeatherICons.time_12].
+  ///
+  /// If [hour] is not within 0-24 then a [UnsupportedError] will be thrown.
   /// Get a 'time' [IconData] at a specific [hour].
   static IconData fromHour(int hour) {
     if (hour < 0 || hour > 24) {
@@ -21,7 +29,7 @@ class TimeIcon {
   static IconData fromDate(DateTime dateTime) => fromHour(dateTime.hour);
 
   /// A list of all of the 'time' [WeatherIcons].
-  static final List all = [
+  static final List<IconData> all = [
     WeatherIcons.time_1,
     WeatherIcons.time_2,
     WeatherIcons.time_3,
