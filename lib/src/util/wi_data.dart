@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 class WIData extends IconData {
-  static const String FONT_FAMILY = 'WeatherIcons';
-  static const String FONT_PACKAGE = 'weather_icons';
+  static const String fontFamilyName = 'WeatherIcons';
+  static const String fontPackageName = 'weather_icons';
 
-  const WIData(int value)
+  const WIData(super.codePoint)
       : super(
-          value,
-          fontFamily: FONT_FAMILY,
-          fontPackage: FONT_PACKAGE,
-        );
+    fontFamily: fontFamilyName,
+    fontPackage: fontPackageName,
+  );
 }
