@@ -6,7 +6,7 @@ import 'package:weather_icons/src/util/rotate.dart';
 class WindIcon extends BoxedIcon {
   final num degree;
 
-   WindIcon({
+   const WindIcon({
     required this.degree,
     super.key,
     super.size,
