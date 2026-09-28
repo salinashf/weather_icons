@@ -21,7 +21,7 @@ class TimeIcon {
   static IconData fromDate(DateTime dateTime) => fromHour(dateTime.hour);
 
   /// A list of all of the 'time' [WeatherIcons].
-  static const List all = [
+  static final List all = [
     WeatherIcons.time_1,
     WeatherIcons.time_2,
     WeatherIcons.time_3,
